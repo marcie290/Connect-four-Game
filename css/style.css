@@ -1,0 +1,224 @@
+/* BACKGROUND AND BODY */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+	font-family: 'Wendy One', sans-serif;
+	font-size: 1.5em;
+	color: black;
+	text-align: center;
+    background: white;  
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#game-scene {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    margin-top: 100px;
+    margin: 100px auto 0;
+    width: 1000px;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table {
+    background-color: #704cf4;
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    padding-top: 15px;
+}
+
+#begin-game {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+	cursor: pointer;
+}
+#begin-game2 {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+	cursor: pointer;
+}
+
+#form1 {
+    position: absolute;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 20px 20px;
+
+    background: #f4f7f8;
+    border-radius: 8px;
+   
+    color: #384047;
+    z-index: 200;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    box-shadow: 0 0 10px #cccfd1;
+}
+legend {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input
+ {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 40px;
+}
+
+/* BOARD AND PIECES */
+#game-board {
+	position: relative;
+	width: 548px;
+	margin: 0 auto;
+	border: 8px solid #704cf4;
+	height: 472px;
+	border-radius: 7px;
+	float: left;
+    z-index: 15;
+    box-sizing: border-box;
+
+}
+
+#game-board-underlay {
+
+    position: absolute;
+	width: 548px;
+	height: 472px;
+    /*box-sizing: border-box;*/
+	margin: 0 auto;
+    left: 0;
+    right: 0;
+    border: 16px solid transparent;
+}
+
+.token {
+    width: 60px;
+    height: 60px;
+	transform: scale(1.1);
+	transform-origin: center;
+    border-radius: 100%;
+    position: absolute;
+    top: -50px;
+	left: 16px;
+}
+
+circle {
+    stroke-width: 16px;
+}
+
+
+/* BOARD STAND */
+.stand-container {
+    float: left;
+    width: 100px;
+    margin-top: 150px;
+    position: relative;
+}
+
+.stand-container.left {
+    left: 27.5px;
+}
+
+.stand-container.right {
+    right: 27.5px;
+}
+
+.stand-leg {
+    width: 20px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #ffc41c;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.stand-attachment {
+    width: 25px;
+    height: 20px;
+    background-color: #ffc41c;
+    position: absolute;
+    top: 15px;
+}
+
+.stand-attachment.left {
+    left: 58px;
+}
+
+.stand-attachment.right {
+    right: 58px;
+}
+
+.stand-foot {
+    width: 100%;
+    background-color: #ffc41c;
+    height: 20px;
+    border-radius: 8px 8px 0px 0px;
+    top: 350px;
+}
+
+/* USER CONTENT*/
+#game-over {
+	display: none;
+	position: absolute;
+    z-index: 100;
+	top: -60px;
+	left: -140px;
+	right: 0;
+}
+#begin-game2 {
+    width: 200px;
+    padding: 6px 39px;
+
+    top: -80px;
+    margin-left: 30px;
+
+}
+#user-board,
+#user-board2{
+    text-align: center;
+    flex-wrap: wrap;
+    width: 120px;
+    max-height: 55px;
+}

@@ -1,20 +1,113 @@
+
 <html>
     <head>
         <meta charset = "UTF-8">
-        <title>Connect Four Game</title>
+        <title>Game</title>
         <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
         <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
     </head>
 
     <body>
 		
-		
+        <div  id = "form1">
+            <form>
+                <label for="name1">Enter Player 1 name.</label>
+                <input type="text" value="Player 1" id="name1" name="userName1">
+                <label for="name2">Enter Player 2 name.</label>
+                <input type="text" value="Player 2" id="name2" name="userName2" >
+            </form>
+            <button id = "begin-game">Start</button>
+        </div>
+
+    	<!-- 
+		#game-scene: container for entire play area
+		#board-place: container for the board
+        .stand-container: the board's stands
+        -->
+        
+    	<div id = "game-scene">
+
+
+            <div id = "user-board">                     
+            </div>
+
+
+            <div id="board-place">
+
+                <div class = "stand-container left">
+                    <div class = "stand-leg">
+                    </div>
+
+        
+                    <div class = "stand-attachment left">
+                    </div>
+                </div>
+
+                <!--
+                #game-over will eventually display a game over message
+                -->
+                <div id = "game-over">
+                    <span id="game-over-message"></span>
+                    <button id = "begin-game2">Replay</button>
+                </div>
+                
+    
+				<!--
+					#game-board-underlay: container for HTML tokens
+				-->
+                <div id = "game-board-underlay">
+                    <div id = "token" data-column = "0">
+                    </div>
+                </div>
+
+            	<!-- 
+				SVGs were used to create the board and the "holes" for the Spaces
+				-->
+                <svg id = "game-board">
+                    <defs>
+                        <!--
+						#mask: container for Space SVGs 
+						-->
+                        <mask id="mask" x="0" y="0" width="548" height="472">
+                            <rect x = "0" y = "0" height = "472" width = "548" fill = "white">
+                        </mask>
+                    </defs>
+                    
+                    <rect id = "board-back" x="0" y="0" width="548" height="472" mask="url(#mask)" fill-opacity = "1" fill = "#704cf4"/>
+                </svg>
+
+                <div class = "stand-container right">
+                    <div class = "stand-leg">
+                    </div>
+   
+                    <div class = "stand-attachment right">
+                    </div>
+                </div>
+        
+                <div style = "clear:both"></div>
+            </div>
+
+
+            <div id = "user-board2"></div>
+
+            
+        </div>
+
+        <!-- 
+		.table: so that the board doesn't look like it's floating
+		-->
+        <div class = "table">
+                <a href="https://en.wikipedia.org/wiki/Connect_Four" target="_blank">
+                    How to play
+                </a>
+        </div>
     </body>
 </html>
 
 
     
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src = "js/Game.js"></script>
 <script src = "js/Board.js"></script>
 <script src = "js/Space.js"></script>
