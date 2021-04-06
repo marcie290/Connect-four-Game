@@ -1,7 +1,7 @@
 # Connect-four-Game
 
 
-[:video_game: Click to play](https://marcie290.github.io/Connect-four-Game/)
+# [:video_game: Click to play](https://marcie290.github.io/Connect-four-Game/)
 
 ## Rules
 
@@ -12,4 +12,6 @@ This means that each player needs to make the right moves and implement proper s
 ## Do you enjoy it?
 
 :eyes: Look at my other projects.
+</br>
+</br>
 :speech_balloon: Please feel free to contact me.
